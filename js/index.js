@@ -74,8 +74,15 @@ function scrollToNextSection() {
   // Nếu đang ở section cuối cùng, chuyển về trang home
   if (isLastSection) {
     nextSection = homeSection;
+    scrollIcon.classList.remove('fa-angles-down');
+    scrollIcon.classList.add('fa-angles-up');
   }
 
+  if (!isLastSection){
+    scrollIcon.classList.remove('fa-angles-up');
+    scrollIcon.classList.add('fa-angles-down');
+  }
+  
   // Cuộn trang đến section tiếp theo
   nextSection.scrollIntoView({ behavior: 'smooth' });
 }
@@ -98,7 +105,7 @@ function getCurrentSection() {
 }
 
 window.addEventListener('scroll', function(){
-  if (window.scrollY === 0) {
+  if (window.scrollY <= 100) {
     scrollIcon.classList.remove('fa-angles-up');
     scrollIcon.classList.add('fa-angles-down');
   } else if ((window.innerHeight + window.scrollY) >= document.documentElement.scrollHeight){
@@ -107,3 +114,20 @@ window.addEventListener('scroll', function(){
     scrollIcon.classList.add('fa-angles-up');
   }
 });
+
+function showMenu(){
+  let menu = document.querySelector('.items-slide-bar');
+  let icon = document.querySelector('.menu-icon');
+  if (!menu.classList.contains('menu-active')){
+    menu.classList.add('menu-active');
+    icon.classList.remove('fa-bars');
+    icon.classList.add('fa-x');
+    menu.style.display = 'block';
+  } else {
+    menu.classList.remove('menu-active');
+    icon.classList.remove('fa-x');
+    icon.classList.add('fa-bars');
+    menu.style.display = 'none';
+  }
+  
+}

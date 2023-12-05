@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" href="/css/index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,9 +23,17 @@
             </ul>
         </div>
         <div class="slide-bar">
-            <i class="fa-solid fa-bars"></i>
+            <a href="#" onclick="showMenu()"><i class="menu-icon fa-solid fa-bars"></i></a>
         </div>
     </header>
+    <div class="items-slide-bar">
+        <ul class="nav-links">
+            <li><a class="nav-link-item" onclick="handleClick(event)" href="#about">About</a></li>
+            <li><a class="nav-link-item" onclick="handleClick(event)" href="#experience">Experience</a></li>
+            <li><a class="nav-link-item" onclick="handleClick(event)" href="#projects">Project</a></li>
+            <li><a class="nav-link-item" onclick="handleClick(event)" href="#contact">Contact</a></li>
+        </ul>
+    </div>
     <section class="container" id="index">
         <img src="/img/cat.png">
         <div class="content">
@@ -188,7 +197,7 @@
                 </div>
                 <div class="contact-item">
                     <i class="fa-brands fa-facebook"></i>
-                    <a href="https://www.facebook.com/VoThanhTuyen.662002/" target="_blank">Vo Thanh Tuyen</a>
+                    <a href="https://www.facebook.com/VoThanhTuyen.662002/" target="_blank"><p>Vo Thanh Tuyen</p></a>
                 </div>
                 <div class="contact-item">
                     <i class="fa-solid fa-location-dot"></i>

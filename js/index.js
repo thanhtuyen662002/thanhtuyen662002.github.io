@@ -129,5 +129,5 @@ function showMenu(){
     icon.classList.add('fa-bars');
     menu.style.display = 'none';
   }
-  
+  event.preventDefault();
 }

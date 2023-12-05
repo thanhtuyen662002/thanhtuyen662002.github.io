@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Handlee&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header-container">
+        <div class="logo">
+            <a href="#index" onclick="handleClickHome(event)">Oscar</a>
+        </div>
+        <div class="items">
+            <ul class="nav-links">
+                <li><a class="nav-link-item" onclick="handleClick(event)" href="#about">About</a></li>
+                <li><a class="nav-link-item" onclick="handleClick(event)" href="#experience">Experience</a></li>
+                <li><a class="nav-link-item" onclick="handleClick(event)" href="#projects">Project</a></li>
+                <li><a class="nav-link-item" onclick="handleClick(event)" href="#contact">Contact</a></li>
+            </ul>
+        </div>
+        <div class="slide-bar">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </header>
+    <section class="container" id="index">
+        <img src="/img/cat.png">
+        <div class="content">
+            <p>Hello, I'm</p>
+            <span class="oscar">Oscar</span>
+            <p>In Vietnamese, you can call me</p>
+            <span class="name">Mr. Tuyen</span>
+            <p> and I are</p>
+            <span class="job">Full Stack Developers</span>
+            <div class="contact">
+                <a href="https://github.com/thanhtuyen662002" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
+                <a href="https://gitlab.com/tuyenvtse160607" target="_blank" title="GitLab"><i class="fa-brands fa-gitlab"></i></a>
+            </div>
+        </div>
+    </section>
+    <section id="about" class="about-container">
+        <div class="about-header">
+            <p class="header-info">Get To Know More</p>
+            <h3 class="header-title">About Me</h3>
+        </div>
+        <div class="about-body">
+            <div class="about-avata">
+                <img src="/img/hinh-meo-cute-chibi.jpg">
+            </div>
+            <div class="about-info">
+                <div class="about-me">
+                    <div class="about-exp">
+                        <i class="fa-solid fa-medal about-icon"></i>
+                        <h3 class="about-title">Experience</h3>
+                        <p class="about-text">2+ years</p>
+                        <p class="about-text">Full Stack Development</p>
+                    </div>
+                    <div class="about-edu">
+                        <i class="fa-solid fa-user-graduate about-icon"></i>
+                        <h3  class="about-title">Education</h3>
+                        <p class="about-text">FPT University</p>
+                        <p class="about-text">Software Engineering</p>
+                    </div>
+                </div>
+                <div class="about-content">
+                    <p>I graduated as a software engineer from FPT University in 2024. </p>
+                    <p>At school, I held positions such as Front End and Back End and I have more than 2 years of <br>experience with code.</p>
+                    <p>I've created a few of my own projects now and you can check them out in detail below!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="experience" class="experience-container">
+        <div class="exp-header">
+            <p class="header-info">Explore My</p>
+            <h3 class="header-title">Experience</h3>
+        </div>
+        <div class="exp-body">
+            <div class="exp-front">
+                <h3 class="exp-title">Frontend Development</h3>
+                <div class="exp-items">
+                    <div class="exp-item">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <div class="item-content">
+                            <h3>HTML</h3>
+                            <p>Experienced</p>
+                        </div>
+                    </div>
+                    <div class="exp-item">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <div class="item-content">
+                            <h3>CSS</h3>
+                            <p>Experienced</p>
+                        </div>
+                    </div>
+                    <div class="exp-item">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <div class="item-content">
+                            <h3>JavaScript</h3>
+                            <p>Intermediate</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="exp-back">
+                <h3 class="exp-title">Backend Development</h3>
+                <div class="exp-items">
+                    <div class="exp-item">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <div class="item-content">
+                            <h3>Java</h3>
+                            <p>Experienced</p>
+                        </div>
+                    </div>
+                    <div class="exp-item">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <div class="item-content">
+                            <h3>.Net</h3>
+                            <p>Basic</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="projects" class="projects-container">
+        <div class="projects-header">
+            <p class="header-info">Browse My Recent</p>
+            <h3 class="header-title">Projects</h3>
+        </div>
+        <div class="projects-body">
+            <div class="project">
+                <div class="project-img">
+                    <img src="/img/anh-avatar-cute-meo-nupet-16.jpg">
+                </div>
+                <p>First Project</p>
+                <div class="project-btn">
+                    <div class="btn-p">
+                        <a href="#">Github</a>
+                    </div>
+                    <div class="btn-p">
+                        <a href="#">Live Demo</a>
+                    </div>
+                </div>
+            </div>
+            <div class="project">
+                <img src="/img/meo-ff.jpg">
+                <p>Second Project</p>
+                <div class="project-btn">
+                    <div class="btn-p">
+                        <a href="#">Github</a>
+                    </div>
+                    <div class="btn-p">
+                        <a href="#">Live Demo</a>
+                    </div>
+                </div>
+            </div>
+            <div class="project">
+                <img src="/img/Hinh-cute-meo-de-thuong.jpg">
+                <p>Third Project</p>
+                <div class="project-btn">
+                    <div class="btn-p">
+                        <a href="#">Github</a>
+                    </div>
+                    <div class="btn-p">
+                        <a href="#">Live Demo</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contact" class="contact-container">
+        <div class="contact-header">
+            <p class="header-info">Contact Information</p>
+            <h3 class="header-title">Contact Me</h3>
+        </div>
+        <div class="contact-body">
+            <div class="contact-items">
+                <div class="contact-item">
+                    <i class="fa-solid fa-phone"></i>
+                    <p>+84 822 793 959</p>
+                </div>
+                <div class="contact-item">
+                    <i class="fa-solid fa-envelope"></i>
+                    <p>Thanhtuyen66202@gmail.com</p>
+                </div>
+                <div class="contact-item">
+                    <i class="fa-brands fa-facebook"></i>
+                    <a href="https://www.facebook.com/VoThanhTuyen.662002/" target="_blank">Vo Thanh Tuyen</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <p>
+                        Alley 249 Nguyen Van Tang street, Long Thanh My ward, Thu Duc city, Ho Chi Minh city </p>
+                </div>
+            </div>
+        </div>
+        <p class="footer">Copyright &#169; 2023 Oscar. All Rights Reserved.</p>
+    </section>
+    <div class="scroll-page">
+        <i class="fa-solid fa-angles-down scroll-icon"></i>
+    </div>
+    <script src="/js/index.js"></script>
+</body>
+<script src="https://kit.fontawesome.com/523c291f54.js" crossorigin="anonymous"></script>
+</html>

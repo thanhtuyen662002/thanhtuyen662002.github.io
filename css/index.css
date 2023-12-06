@@ -5,6 +5,7 @@
 body {
     font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
+    user-select: none;
 }
 a,
 .btn {
@@ -28,6 +29,10 @@ html {
   
   ::-webkit-scrollbar-thumb:hover {
     background-color: #555; /* Màu của thanh cuộn khi rê chuột vào */
+  }
+  ::selection {
+    background-color: darkgreen;
+    color: white;
   }
 .header-container {
     display: flex;
@@ -66,7 +71,10 @@ html {
 }
 .nav-active {
     color: darkgreen !important;
-    font-weight: 600;
+    font-weight: 700;
+}
+.mode {
+    cursor: pointer;
 }
 .slide-bar {
     cursor: pointer;
@@ -281,6 +289,9 @@ img {
     height: auto;
     padding: 2rem;
 }
+.contact-items p{
+    user-select: text;
+}
 .contact-item {
     display: flex;
     gap: 1rem;
@@ -308,7 +319,7 @@ img {
     bottom: 0;
     margin-right: 3rem;
     margin-bottom: 2rem;
-    border: 1px solid black;
+    border: 1px solid inherit;
     border-radius: 100%;
     padding: 1rem;
     aspect-ratio: 1/1;
@@ -476,4 +487,48 @@ img {
         margin-bottom: 1rem;
         margin-top: 7rem;
     }
+}
+:root{
+    --black: #000000;
+    --white: #CCCCCC;
+    --light-white: #FFFFFF;
+    --dark-white: #afafaf;
+}
+body.mode-active {
+    background-color: var(--black);
+}
+body.mode-active .header-container{
+    color: var(--white);
+    background-color: var(--black);
+}
+body.mode-active p,
+body.mode-active h3,
+body.mode-active i {
+    color: var(--white);
+}
+body.mode-active .oscar{
+    color: var(--light-white);
+}
+body.mode-active .about-exp,
+body.mode-active .about-edu,
+body.mode-active .exp-front,
+body.mode-active .exp-back,
+body.mode-active .project,
+body.mode-active .contact-items,
+body.mode-active .btn-p{
+    border-color: var(--white);
+}
+body.mode-active .btn-p a{
+    color: var(--white);
+}
+body.mode-active .btn-p:hover{
+    border-color: darkgreen;
+}
+body.mode-active .contact-item a p:hover{
+    color: darkgreen;
+}
+body.mode-active .items-slide-bar{
+    background-color: var(--black);
+    border-color: var(--white);
+    color: var(--white);
 }

@@ -17,6 +17,25 @@ function handleClick(event) {
     });
   }
 
+const toggle = document.querySelector('.toggle-input');
+const initialState = localStorage.getItem('toggleState') == 'true';
+toggle.checked = initialState;
+
+toggle.addEventListener('change', function() {
+  localStorage.setItem('toggleState', toggle.checked);
+  changeMode();
+});
+
+let body = document.body;
+function changeMode(){
+  console.log('mode', toggle.checked)
+  if (!toggle.checked){
+    body.classList.add('mode-active');
+  } else {
+    body.classList.remove('mode-active');
+  }
+}
+
   window.addEventListener('DOMContentLoaded', function() {
     var sections = document.querySelectorAll('section'); // Lấy tất cả các phần tử <section>
     var navLinks = document.querySelectorAll('.nav-link-item'); // Lấy tất cả các liên kết trong thanh điều hướng
@@ -52,6 +71,7 @@ function handleClick(event) {
     }
   
     window.addEventListener('scroll', handleScroll);
+    changeMode();
   });
 
  // Lấy các phần tử cần sử dụng
